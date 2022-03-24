@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import "./AllProducts.css";
 
-const AllProducts = () => {
-
+const AllProducts = (props) => {
+    const { setCartCount } = props;
     const [products,setProducts] = useState([]);
 
     useEffect(()=>{
@@ -17,7 +17,7 @@ const AllProducts = () => {
             <h1>All Products</h1>
             
             <div className="row container">
-            {products.map((props)=>(<SingleProduct key={props.id} product={props}></SingleProduct>))}
+            {products.map((props)=>(<SingleProduct key={props.id} product={props} setCartCount={setCartCount}></SingleProduct>))}
             </div>
 
         </div>
