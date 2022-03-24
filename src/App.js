@@ -16,7 +16,7 @@ function App() {
     AOS.init();
   },[]);
   return (
-    <div className="App">
+    <div className="App container">
       <Menubar count={count}></Menubar>
       <AllProducts setCartCount={setCartCount}></AllProducts>
     </div>

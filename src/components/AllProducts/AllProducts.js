@@ -14,7 +14,7 @@ const AllProducts = (props) => {
 
     return (
         <div>
-            <h1>All Products</h1>
+            <h1 className='text-warning mb-5 mt-3'>Fake Store Shop</h1>
             
             <div className="row container">
             {products.map((props)=>(<SingleProduct key={props.id} product={props} setCartCount={setCartCount}></SingleProduct>))}
