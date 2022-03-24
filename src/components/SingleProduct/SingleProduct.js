@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactModal from '../ReactModal/ReactModal';
 import "./SingleProduct.css";
 
 const SingleProduct = (props) => {
@@ -12,7 +13,8 @@ const SingleProduct = (props) => {
             <div className='d-flex justify-content-around'>
             <button className='btn btn-success' onClick={setCartCount}>Add to Cart</button>
             <button className='btn btn-danger'>Delete</button>
-            <button className='btn btn-info'>Details</button>
+            {/* <button className='btn btn-info'>Details</button> */}
+            <ReactModal product={props.product}></ReactModal>
             </div>
 
             </div>
